@@ -8,10 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.clicktale.clicktalesdk.Clicktale;
 
 import io.github.yusukeiwaki.clicktalehideviewbug.model.Message;
 import io.github.yusukeiwaki.clicktalehideviewbug.static_array_list.StaticArrayListViewHolder;
+import io.repro.android.Repro;
 
 public class MessageListItemViewHolder extends StaticArrayListViewHolder<Message> {
     private final @Nullable ImageView avatar;
@@ -32,7 +32,7 @@ public class MessageListItemViewHolder extends StaticArrayListViewHolder<Message
         }
         messageBodyContainer.removeAllViews();
         messageBodyContainer.addView(createMessageTextView(message.body));
-        Clicktale.hideView(messageBodyContainer);
+        Repro.mask(messageBodyContainer);
     }
 
     private View createMessageTextView(String body) {

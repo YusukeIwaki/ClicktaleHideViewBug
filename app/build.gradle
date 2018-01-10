@@ -18,8 +18,7 @@ android {
 }
 
 dependencies {
-    implementation files('libs/clicktale.jar')
-    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'io.repro:repro-android-sdk:+'
     implementation 'com.android.support:appcompat-v7:27.0.2'
     implementation 'com.android.support:recyclerview-v7:27.0.2'
     implementation 'com.parse.bolts:bolts-tasks:1.4.0'
